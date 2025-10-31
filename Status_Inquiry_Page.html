@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style18.css" />
+
+<script>
+  // وظيفة زر العودة
+  function goBack() {
+    window.location.href = "Login_Page.html"; 
+  }
+
+  // وظيفة زر الاستعلام
+  function checkStatus() {
+    const id = document.getElementById("requestId").value.trim();
+
+    if (id === "") {
+      alert("⚠️ يرجى إدخال رقم الطلب أولاً");
+    } 
+    else if (id === "20250918-021") {
+      // نجاح
+      window.location.href = "Status_Accepted.html";  
+    } 
+    else if (id === "20250000-000") {
+      // حالة فشل (طلب مرفوض مثلاً)
+      window.location.href = "Status_Denied.html";  
+    }
+    else {
+      // أي رقم غير مطابق
+      alert("❌ الرقم المدخل غير مطابق لأي طلب مسجل");
+    }
+  }
+</script>
+
+
+  </head>
+  <body>
+     <div class="frame">
+    <div class="examples-reviews-web">
+      <img class="kingdom" src="img/your-image.jpg" />
+      <div class="form">
+        <div class="background"></div>
+<button class="light-button" onclick="goBack()">العودة</button>
+        <p class="div">
+          <span class="span">متابعة حالة الطلب<br /></span>
+          <span class="text-wrapper-3">أدخل رقم الطلب الذي استلمته بعد الإرسال لمعرفة حالته الحالية.</span>
+        </p>
+        <p class="p">منصة الاستبيانات - مكتب إدارة البيانات الوطنية © 2025</p>
+      </div>
+      <p class="NDMO">
+        <span class="text-wrapper-4">منصة الإستبيانات التابعة <br /></span>
+        <span class="text-wrapper-5"></span>
+        <span class="text-wrapper-6">لمكتب إدارة البيانات الوطنية - NDMO<br /></span>
+        <span class="text-wrapper-7"><br /></span>
+        <span class="text-wrapper-6"
+          >وهي منصة رقمية موحدة تمكّن الجهات الحكومية من<br />
+          التسجيل الرسمي، تعبئة الاستبيانات، ومتابعة آخر <br />الأخبار والتحديثات الرسمية</span
+        >
+      </p>
+    
+    <button class="dark-button" onclick="checkStatus()" style="color: aliceblue;">إستعلام</button>
+
+      <div class="form">
+     <input type="text" class="input-text" id="requestId" placeholder=" Example: 20250918-021" />
+      </div>
+      
+      <div class="background-2"></div>
+     
+      <div class="NDMO-logo-homepage" onclick="window.location.href='homepage.html'"></div>
+        <div class="layer"><img class="vector" src="img/vector.svg" /> <img class="img" src="img/image.svg" /></div>
+      </div>
+    </div>
+  </body>
+</html>

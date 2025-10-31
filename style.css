@@ -1,0 +1,948 @@
+.examples-reviews-web {
+  position: relative;
+  width: 905px;
+  height: 1409px;
+  border-radius: 18px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    rgba(39, 23, 78, 1) 0%,
+    rgba(53, 70, 180, 1) 100%
+  );
+}
+
+.examples-reviews-web .icons {
+  margin-top: 22px;
+  width: 96px;
+  height: 24px;
+  margin-left: 16px;
+}
+
+
+
+
+.examples-reviews-web .img {
+  position: absolute;
+  width: 83.33%;
+  height: 79.17%;
+  top: 8.33%;
+  left: 8.33%;
+}
+
+
+.examples-reviews-web .text-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.8px;
+  width: 14px;
+  height: 24px;
+  margin-left: 7.2px;
+  font-family: var(--m3-body-large-font-family);
+  font-weight: var(--m3-body-large-font-weight);
+  color: var(--m-3white);
+  font-size: var(--m3-body-large-font-size);
+  text-align: center;
+  letter-spacing: var(--m3-body-large-letter-spacing);
+  line-height: var(--m3-body-large-line-height);
+  white-space: nowrap;
+  font-style: var(--m3-body-large-font-style);
+}
+
+.examples-reviews-web .more {
+  margin-top: 22px;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.examples-reviews-web .icon-2 {
+  position: absolute;
+  width: 16.67%;
+  height: 66.67%;
+  top: 16.67%;
+  left: 41.67%;
+}
+
+.examples-reviews-web .kingdom {
+  position: absolute;
+  top: 131px;
+  left: 0;
+  width: 905px;
+  height: 1036px;
+  aspect-ratio: 1.67;
+  object-fit: cover;
+}
+
+.examples-reviews-web .div {
+  position: absolute;
+  top: 346px;
+  left: 478px;
+  font-family: "SF Arabic Rounded-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 57.9px;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+}
+
+.examples-reviews-web .p {
+  position: absolute;
+  top: 451px;
+  left: 254px;
+  font-family: "SF Arabic Rounded-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 36px;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+}
+
+.examples-reviews-web .rectangle {
+  position: absolute;
+  top: 1190px;
+  left: 0;
+  width: 905px;
+  height: 219px;
+  background-color: #27174e66;
+  border-radius: 6px;
+}
+
+.examples-reviews-web .screenshot {
+  position: absolute;
+  top: 1213px;
+  left: 293px;
+  width: 386px;
+  height: 175px;
+  aspect-ratio: 2.21;
+  object-fit: cover;
+}
+
+.examples-reviews-web .pagenation {
+  position: absolute;
+  top: 881px;
+  left: 403px;
+  width: 98px;
+  height: 14px;
+  display: flex;
+  gap: 27.6px;
+  backdrop-filter: blur(49.5px) brightness(100%);
+  -webkit-backdrop-filter: blur(49.5px) brightness(100%);
+}
+
+.examples-reviews-web .element {
+  margin-top: 0;
+  width: 14.18px;
+  height: 14.18px;
+  background-color: #d9d9d9;
+  border-radius: 7.09px;
+  border: 1px solid;
+  border-color: #00000085;
+}
+
+.examples-reviews-web .group {
+  position: absolute;
+  top: 581px;
+  left: 2px;
+  width: 900px;
+  height: 324px;
+}
+
+.examples-reviews-web .section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 904px;
+  height: 324px;
+}
+
+.examples-reviews-web .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 33vh;
+ 
+  background-size: cover;      /* يغطي كامل الفريم */
+  background-repeat: no-repeat;
+  background-position: center; /* يركز الصورة في النص */
+}
+img { 
+  cursor: pointer;
+}
+.sign-in-icon .SDAIA-website {
+  cursor: pointer;
+}
+
+.examples-reviews-web .farword-icon {
+  position: absolute;
+  top: 145px;
+  left: 835px;
+  width: 42px;
+  height: 40px;
+}
+.farword-icon, .backword-icon  {
+  cursor: pointer;
+}
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;            /* يمتلئ عرض الشاشة */
+  max-width: 100%;        /* يمنع التمدد الزائد */
+  position: relative;
+  margin: auto;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  flex: 1;                 /* يأخذ المساحة المتبقية بين الأسهم */
+}
+
+.cards-wrapper {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.6s ease;
+}
+
+.arrow-btn {
+  cursor: pointer;
+  background: #ffffffcc;   /* خلفية شبه شفافة */
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background: #ffffff;
+}
+
+.arrow-btn.left {
+  margin-right: 10px;
+}
+.cards-wrapper {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.6s ease;
+  position: relative;
+}
+.farword-icon, .backword-icon {
+  cursor: pointer;
+}
+
+.arrow-btn.right {
+  margin-left: 10px;
+}
+
+.arrow, .arrow-2 {
+  width: 24px;
+  height: 24px;
+}
+
+
+.examples-reviews-web .ellipse {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 42px;
+  height: 40px;
+  background-color: #ffffffe3;
+  border-radius: 21.07px / 19.94px;
+  transform: rotate(180.00deg);
+}
+
+.examples-reviews-web .arrow {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  width: 14px;
+  height: 15px;
+}
+
+.examples-reviews-web .card {
+  left: 594px;
+  width: 200px;
+  display: flex;
+  background-image: url(./img/backround-2.svg);
+  background-size: 100% 100%;
+  position: absolute;
+  top: 40px;
+  height: 225px;
+}
+
+.examples-reviews-web .view {
+  margin-top: 98.6px;
+  width: 142.16px;
+  height: 30.89px;
+  margin-left: 29.5px;
+  position: relative;
+}
+
+.examples-reviews-web .vector {
+  position: absolute;
+  top: 9px;
+  left: 124px;
+  width: 18px;
+  height: 15px;
+}
+
+.examples-reviews-web .vector-2 {
+  position: absolute;
+  top: 8px;
+  left: 103px;
+  width: 23px;
+  height: 23px;
+}
+
+.examples-reviews-web .vector-3 {
+  position: absolute;
+  top: 1px;
+  left: 89px;
+  width: 4px;
+  height: 24px;
+}
+
+.examples-reviews-web .vector-4 {
+  position: absolute;
+  top: 0;
+  left: 76px;
+  width: 8px;
+  height: 24px;
+}
+
+.examples-reviews-web .vector-5 {
+  position: absolute;
+  top: 10px;
+  left: 57px;
+  width: 21px;
+  height: 14px;
+}
+
+.examples-reviews-web .vector-6 {
+  position: absolute;
+  top: 12px;
+  left: 46px;
+  width: 12px;
+  height: 12px;
+}
+
+.examples-reviews-web .vector-7 {
+  position: absolute;
+  top: 4px;
+  left: 50px;
+  width: 4px;
+  height: 4px;
+}
+
+.examples-reviews-web .vector-8 {
+  position: absolute;
+  top: 9px;
+  left: 15px;
+  width: 32px;
+  height: 15px;
+}
+
+.examples-reviews-web .vector-9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 24px;
+}
+
+.examples-reviews-web .card-2 {
+  left: 357px;
+  width: 352px;
+  position: absolute;
+  top: 40px;
+  height: 225px;
+}
+
+.examples-reviews-web .backround {
+  background-color: #222b59a1;
+  border-radius: 25.22px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 199px;
+  height: 225px;
+}
+
+.examples-reviews-web .text-wrapper-2 {
+  position: absolute;
+  top: 66px;
+  left: 16px;
+  width: 158px;
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--theme-colors-neutrals-background-neturals-basewhite);
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 44px;
+  direction: rtl;
+}
+
+.examples-reviews-web .icon-3 {
+  position: absolute;
+  top: 202px;
+  left: 92px;
+  width: 13px;
+  height: 12px;
+}
+
+.examples-reviews-web .icon-4 {
+  position: absolute;
+  top: 202px;
+  left: 337px;
+  width: 13px;
+  height: 12px;
+}
+
+.examples-reviews-web .card-3 {
+  left: 123px;
+  width: 201px;
+  position: absolute;
+  top: 40px;
+  height: 225px;
+}
+
+.examples-reviews-web .backround-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 199px;
+  height: 225px;
+}
+
+.examples-reviews-web .text-wrapper-3 {
+  position: absolute;
+  top: 91px;
+  left: 48px;
+  font-family: var(--m3-display-small-font-family);
+  font-weight: var(--m3-display-small-font-weight);
+  color: var(--theme-colors-neutrals-background-neturals-basewhite);
+  font-size: var(--m3-display-small-font-size);
+  text-align: left;
+  letter-spacing: var(--m3-display-small-letter-spacing);
+  line-height: var(--m3-display-small-line-height);
+  white-space: nowrap;
+  direction: rtl;
+  font-style: var(--m3-display-small-font-style);
+}
+
+.examples-reviews-web .backword-icon {
+  position: absolute;
+  top: 145px;
+  left: 36px;
+  width: 42px;
+  height: 40px;
+  display: flex;
+  background-color: #ffffffe3;
+  border-radius: 21.08px / 19.94px;
+}
+
+.examples-reviews-web .arrow-2 {
+  margin-top: 12.5px;
+  width: 13.88px;
+  height: 15.47px;
+  margin-left: 13.6px;
+}
+
+.examples-reviews-web .pagenation-2 {
+  position: absolute;
+  top: 300px;
+  left: 401px;
+  width: 14px;
+  height: 14px;
+  background-color: #d9d9d9;
+  border-radius: 7.09px;
+  border: 1px solid;
+  border-color: #00000085;
+  backdrop-filter: blur(49.5px) brightness(100%);
+  -webkit-backdrop-filter: blur(49.5px) brightness(100%);
+}
+
+.examples-reviews-web .text-wrapper-4 {
+  position: absolute;
+  top: 238px;
+  left: 466px;
+  font-family: "SF Arabic Rounded-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 13.8px;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+}
+
+.examples-reviews-web .text-wrapper-5 {
+  position: absolute;
+  top: 238px;
+  left: 712px;
+  font-family: "SF Arabic Rounded-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 13.8px;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+}
+
+.examples-reviews-web .icon-5 {
+  position: absolute;
+  top: 242px;
+  left: 215px;
+  width: 13px;
+  height: 12px;
+}
+
+.examples-reviews-web .text-wrapper-6 {
+  position: absolute;
+  top: 819px;
+  left: 237px;
+  font-family: "SF Arabic Rounded-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 13.8px;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+}
+
+.examples-reviews-web .div-2 {
+  position: absolute;
+  top: 1074px;
+  left: 0;
+  width: 905px;
+  height: 116px;
+  display: flex;
+  gap: 110px;
+  background-color: var(--colors-miscellaneous-keyboards-emoji-mic);
+}
+
+.examples-reviews-web .frame {
+  margin-left: 39px;
+  margin-top: 18.5px;
+  width: 120px;
+  height: 79px;
+  display: flex;
+  flex-direction: column;
+}
+
+.examples-reviews-web .text-wrapper-7 {
+  margin-left: 14px;
+  width: 92px;
+  height: 20px;
+  font-family: var(--body-medium-medium-14-font-family);
+  font-weight: var(--body-medium-medium-14-font-weight);
+  color: var(--theme-colors-neutrals-background-neturals-basewhite);
+  font-size: var(--body-medium-medium-14-font-size);
+  text-align: left;
+  letter-spacing: var(--body-medium-medium-14-letter-spacing);
+  line-height: var(--body-medium-medium-14-line-height);
+  white-space: nowrap;
+  direction: rtl;
+  font-style: var(--body-medium-medium-14-font-style);
+}
+
+.examples-reviews-web .text-wrapper-8 {
+  margin-left: 46.5px;
+  width: 27px;
+  height: 59px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--theme-colors-neutrals-background-neturals-basewhite);
+  font-size: 42px;
+  letter-spacing: 0.20px;
+  line-height: 58.8px;
+  white-space: nowrap;
+}
+
+.examples-reviews-web .frame-2 {
+  margin-top: 18.5px;
+  width: 120px;
+  height: 79px;
+  display: flex;
+  flex-direction: column;
+}
+
+.examples-reviews-web .text-wrapper-9 {
+  margin-left: 11.5px;
+  width: 97px;
+  height: 20px;
+  font-family: var(--body-medium-medium-14-font-family);
+  font-weight: var(--body-medium-medium-14-font-weight);
+  color: var(--theme-colors-neutrals-background-neturals-basewhite);
+  font-size: var(--body-medium-medium-14-font-size);
+  text-align: left;
+  letter-spacing: var(--body-medium-medium-14-letter-spacing);
+  line-height: var(--body-medium-medium-14-line-height);
+  white-space: nowrap;
+  direction: rtl;
+  font-style: var(--body-medium-medium-14-font-style);
+}
+
+.examples-reviews-web .text-wrapper-10 {
+  margin-left: 19px;
+  width: 82px;
+  height: 59px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--theme-colors-neutrals-background-neturals-basewhite);
+  font-size: 42px;
+  letter-spacing: 0.20px;
+  line-height: 58.8px;
+  white-space: nowrap;
+}
+
+.examples-reviews-web .text-wrapper-11 {
+  margin-left: -2px;
+  width: 124px;
+  height: 20px;
+  font-family: var(--body-medium-medium-14-font-family);
+  font-weight: var(--body-medium-medium-14-font-weight);
+  color: var(--theme-colors-neutrals-background-neturals-basewhite);
+  font-size: var(--body-medium-medium-14-font-size);
+  text-align: left;
+  letter-spacing: var(--body-medium-medium-14-letter-spacing);
+  line-height: var(--body-medium-medium-14-line-height);
+  white-space: nowrap;
+  direction: rtl;
+  font-style: var(--body-medium-medium-14-font-style);
+}
+
+.examples-reviews-web .text-wrapper-12 {
+  margin-left: 32.5px;
+  width: 55px;
+  height: 59px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--theme-colors-neutrals-background-neturals-basewhite);
+  font-size: 42px;
+  letter-spacing: 0.20px;
+  line-height: 58.8px;
+  white-space: nowrap;
+}
+
+.examples-reviews-web .text-wrapper-13 {
+  margin-left: 27px;
+  width: 66px;
+  height: 20px;
+  font-family: var(--body-medium-medium-14-font-family);
+  font-weight: var(--body-medium-medium-14-font-weight);
+  color: var(--theme-colors-neutrals-background-neturals-basewhite);
+  font-size: var(--body-medium-medium-14-font-size);
+  text-align: left;
+  letter-spacing: var(--body-medium-medium-14-letter-spacing);
+  line-height: var(--body-medium-medium-14-line-height);
+  white-space: nowrap;
+  direction: rtl;
+  font-style: var(--body-medium-medium-14-font-style);
+}
+
+.examples-reviews-web .text-wrapper-14 {
+  margin-left: 20px;
+  width: 80px;
+  height: 59px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--theme-colors-neutrals-background-neturals-basewhite);
+  font-size: 42px;
+  letter-spacing: 0.20px;
+  line-height: 58.8px;
+  white-space: nowrap;
+}
+
+.examples-reviews-web .sign-in-icon {
+  position: absolute;
+  top: 98px;
+  left: 254px;
+  width: 128px;
+  height: 88px;
+  aspect-ratio: 1.45;
+  background-image: url(./img/signIn.png);
+  background-size: cover;
+  background-position: 50% 50%;
+   cursor: pointer;
+
+}
+/* الزر الجانبي */
+.icon-button {
+  display: inline-flex;
+  align-items: flex-start;
+  position: absolute;
+  top: 75px;
+  left: -24px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* السايدبار */
+.sidebar {
+  position: fixed;
+  top: 50%;
+  right: -44px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 1000;
+}
+
+.sidebar.hidden {
+  display: none;
+}
+
+.sidebar img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* زر إغلاق صغير داخل السايدبار */
+.sidebar .close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 24px;
+  height: 24px;
+  background-image: url(./img/close.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* القوائم */
+.has-submenu {
+  position: relative;
+}
+
+.sidebar-row2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.sidebar-row2:hover { background: rgba(255,255,255,0.1); }
+
+.has-submenu .submenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 210px;
+  display: none;
+  flex-direction: column;
+  background: rgba(20, 20, 40, 0.92);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 8px 6px;
+  z-index: 2000;
+}
+
+.submenu-item {
+  padding: 10px 12px;
+  color: #e5e5e5;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.submenu-item:hover { background: rgba(255,255,255,0.08); color: #fff; }
+
+.has-submenu.open .submenu { display: flex; }
+.has-submenu.open .sidebar-row2 .arrow { transform: rotate(180deg); }
+
+.examples-reviews-web .SDAIA-website {
+  position: absolute;
+  top: 114px;
+  left: 112px;
+  width: 141px;
+  height: 74px;
+  aspect-ratio: 1.91;
+  background-image: url(./img/SDAIA-website.png);
+  background-size: cover;
+  background-position: 50% 50%;
+   cursor: pointer;
+}
+.div, .p, .text-wrapper-3, .text-wrapper-4, .text-wrapper-5, .text-wrapper-6 {
+  pointer-events: none;
+  z-index: 2;
+}
+.examples-reviews-web .icon-button {
+  display: inline-flex;
+  align-items: flex-start;
+  position: absolute;
+  top: 74px;
+  left: -15px;
+
+}
+
+.examples-reviews-web .content-wrapper {
+  display: flex;
+  width: 136px;
+  height: 136px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.examples-reviews-web .content {
+  display: flex;
+  flex-direction: column;
+  width: 136px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.examples-reviews-web .state-layer {
+  display: flex;
+  height: 136px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.examples-reviews-web .icon-6 {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.examples-reviews-web .mouse-cursor {
+  position: absolute;
+  top: 808px;
+  left: 136px;
+  width: 58px;
+  height: 72px;
+  display: flex;
+}
+
+.examples-reviews-web .layer {
+  flex: 1;
+  width: 58px;
+  position: relative;
+  overflow: hidden;
+  background-image: url(./img/b.svg);
+  background-size: 100% 100%;
+}
+
+.examples-reviews-web .vector-10 {
+  position: absolute;
+  width: 100.00%;
+  height: 100.00%;
+  top: 0;
+  left: 0;
+}
+
+.examples-reviews-web .vector-11 {
+  position: absolute;
+  width: 89.79%;
+  height: 91.75%;
+  top: 4.14%;
+  left: 5.06%;
+}
+.examples-reviews-web .text-wrapper-34 {
+  position: absolute;
+  top: -300px;
+  left: 600px;
+  font-family: "SF Arabic Rounded-Bold", Helvetica;
+  font-weight: 1000;
+  color: #ffffff;
+  font-size: 38px;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+
+}
+.examples-reviews-web .text-wrapper-35 {
+  position: absolute;
+  top: -250px;
+  left: 600px;
+  font-family: "SF Arabic Rounded-Bold", Helvetica;
+  font-weight: 1000;
+  color: #ffffff;
+  font-size: 38px;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+
+}
+.examples-reviews-web .text-wrapper-36 {
+  position: absolute;
+  top: -250px;
+  left:390px;
+  font-family: "SF Arabic Rounded-Bold", Helvetica;
+  font-weight: 1000;
+  color: #ffffff;
+  font-size: 38px;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.frame {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* يغطي الشاشة كاملة */
+  overflow: hidden;
+}
+
+.frame .examples-reviews-web {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0; /* يشيل الحواف إذا ما تبغاها */
+  border: none;     /* يشيل الإطار الرمادي */
+  background: linear-gradient(
+    180deg,
+    rgba(39, 23, 78, 1) 0%,
+    rgba(53, 70, 180, 1) 100%
+  );
+}
+
+.frame .kingdom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* يخلي الصورة تغطي بدون تمدد غير متناسق */
+}

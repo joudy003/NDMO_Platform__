@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide7.css" />
+    <link rel="stylesheet" href="style7.css" />
+  </head>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const eye = document.querySelector(".eye");
+  const passwordInput = document.querySelector(".placeholder-text2"); // هذا هو حقل كلمة المرور في الصفحة الجديدة
+
+  function togglePassword(input, eyeElement) {
+    if (input.type === "password") {
+      input.type = "text";
+      eyeElement.style.backgroundImage = "url('./img/closed-eye.png')";
+    } else {
+      input.type = "password";
+      eyeElement.style.backgroundImage = "url('./img/eye.png')";
+    }
+  }
+
+  eye.addEventListener("click", () => {
+    togglePassword(passwordInput, eye);
+  });
+});
+</script>
+  <body>
+    <div class="frame">
+    <div class="examples-reviews-web">
+      <img class="kingdom" src="img/your-image.jpg" />
+      <div class="form">
+        <div class="background"></div>
+        <p class="NDMO">
+          <span class="span">تسجيل الدخول<br /></span>
+          <span class="text-wrapper-2"></span>
+          <span class="text-wrapper-3">مرحباً بك في منصة NDMO</span>
+        </p>
+        <p class="div">منصة الاستبيانات - مكتب إدارة البيانات الوطنية © 2025</p>
+      </div>
+
+      <button class="wide-light-button becaus" onclick="window.location.href='Assign_option.html'">
+      <span class="text-wrapper-4"> تسجيل جهة جديدة</span>
+      </button>
+
+      <div class="group"><img class="line" src="img/line-1.svg" /></div>
+      <p class="p">
+        <span class="text-wrapper-5">منصة الإستبيانات التابعة <br /></span>
+        <span class="text-wrapper-6"></span>
+        <span class="text-wrapper-7">لمكتب إدارة البيانات الوطنية - NDMO<br /></span>
+        <span class="text-wrapper-8"><br /></span>
+        <span class="text-wrapper-7"
+          >وهي منصة رقمية موحدة تمكّن الجهات الحكومية من<br />
+          التسجيل الرسمي، تعبئة الاستبيانات، ومتابعة آخر <br />الأخبار والتحديثات الرسمية</span
+        >
+      </p>
+      <div class="NDMO-logo-homepage" onclick="window.location.href='homepage.html'"></div>
+      <div class="text-field">
+        <div class="text-wrapper-9">البريد الالكتروني</div>
+        <input type="text" class="placeholder-text" placeholder="  example@gov.sa" />
+
+      </div>
+      <div class="text-field-2">
+      <div class="text-wrapper-10">رمز المرور</div>
+   <input type="password" class="placeholder-text2" placeholder=" XXXXXXXXXXXXXX  " /></div>   
+    <div class="eye"></div>
+      <button class="wide-dark-button " onclick="window.location.href='OTP_Page.html'">
+      <span class="text-wrapper-11"> تسجيل الدخول </span>
+      </button>
+      <button class="wide-light-button becaus-wrapper" onclick="window.location.href='Status_Inquiry_Page.html'">
+      <span class="text-wrapper-14"> متابعة طلب مرفوع</span>
+      </button>
+
+      <button class="clickable-text" onclick="window.location.href='Reset_Password.html'">نسيت كلمة المرور؟</button>
+
+      <div class="div-wrapper"><div class="text-wrapper-13">ليس لديك حساب؟</div>
+    </div>
+  </body>
+</html>

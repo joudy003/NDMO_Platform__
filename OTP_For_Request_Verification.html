@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style13.css" />
+    
+     <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const inputs = document.querySelectorAll(".otp-input");
+
+  inputs.forEach((input, index) => {
+    input.addEventListener("input", () => {
+      if (input.value.length > 0 && index < inputs.length - 1) {
+        inputs[index + 1].focus(); // ينتقل للخانة التالية
+      }
+    });
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" && input.value === "" && index > 0) {
+        inputs[index - 1].focus(); // يرجع للخلف عند المسح
+      }
+    });
+  });
+});
+</script>
+
+  </head>
+  <body>
+    <div class="frame">
+    <div class="examples-reviews-web">
+      <img class="kingdom" src="img/your-image.jpg" />
+      <div class="form">
+        <div class="background"></div>
+        <div class="rectangle"></div>
+        <div class="div"></div>
+      <div class="otp-container" style="position:absolute; top:133px; left:18px;  gap:16px;">
+  <input type="text" maxlength="1" class="otp-input" />
+  <input type="text" maxlength="1" class="otp-input" />
+  <input type="text" maxlength="1" class="otp-input" />
+  <input type="text" maxlength="1" class="otp-input" />
+  <input type="text" maxlength="1" class="otp-input" />
+  <input type="text" maxlength="1" class="otp-input" />
+</div>
+        <div class="becaus">
+          <p class="p">
+            <span class="span">لم يصلك الرمز؟</span>
+            <a href="https://app.onecompiler.com/43yxewq59_43yzta6ps/#" target="_blank" rel="noopener noreferrer"
+              ><span class="text-wrapper-7">إعادة الإرسال</span></a
+            >
+          </p>
+        </div>
+        <p class="element">
+          <span class="text-wrapper-8">رمز التحقق<br /><br /></span>
+          <span class="text-wrapper-9"
+            >تم إرسال رمز مكوّن من 6 أرقام إلى بريدك الإلكتروني. يرجى إدخاله أدناه لتأكيد هويتك.</span
+          >
+        </p>
+        <p class="text-wrapper-10">منصة الاستبيانات - مكتب إدارة البيانات الوطنية © 2025</p>
+        <div class="left-arrow"><img class="left" src="img/Arrow_to_left8.png" /></div>
+      </div>
+      <p class="NDMO">
+        <span class="text-wrapper-11">منصة الإستبيانات التابعة <br /></span>
+        <span class="text-wrapper-12"><br /></span>
+        <span class="text-wrapper-13">لمكتب إدارة البيانات الوطنية - NDMO<br /></span>
+        <span class="text-wrapper-14"><br /></span>
+        <span class="text-wrapper-13"
+          >وهي منصة رقمية موحدة تمكّن الجهات الحكومية من<br />
+          التسجيل الرسمي، تعبئة الاستبيانات، ومتابعة آخر <br />الأخبار والتحديثات الرسمية</span
+        >
+      </p>
+      <div class="NDMO-logo-homepage" onclick="window.location.href='homepage.html'"></div>
+      <div class="div-wrapper"><div class="text-wrapper-15" onclick="window.location.href='Followupـonـregistrationـrequest.html'">العودة لمعلومات التحقق</div></div>
+      <div class="wide-dark-button"><div class="text-wrapper-16">تأكيد الرمز</div></div>
+    </div>
+  </body>
+</html>

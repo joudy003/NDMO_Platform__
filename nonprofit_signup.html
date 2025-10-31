@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style10.css" />
+  </head>
+  <body>
+    <div class="frame">
+    <div class="examples-reviews-web">
+      <img class="kingdom" src="img/your-image.jpg" />
+      <div class="form">
+        <div class="background"></div>
+        <div class="becaus"><div class="text-wrapper">إرسال الطلب</div></div>
+        <p class="div">
+          <span class="span">تسجيل جهة جديدة<br /></span>
+          <span class="text-wrapper-2"></span>
+          <span class="text-wrapper-3">الرجاء تعبئة البيانات المطلوبة للتسجيل في المنصة</span>
+        </p>
+        <p class="p">منصة الاستبيانات - مكتب إدارة البيانات الوطنية © 2025</p>
+      </div>
+      <p class="NDMO">
+        <span class="text-wrapper-4">منصة الإستبيانات التابعة <br /></span>
+        <span class="text-wrapper-5"><br /></span>
+        <span class="text-wrapper-6">لمكتب إدارة البيانات الوطنية - NDMO<br /></span>
+        <span class="text-wrapper-7"><br /></span>
+        <span class="text-wrapper-6"
+          >وهي منصة رقمية موحدة تمكّن الجهات الحكومية من<br />
+          التسجيل الرسمي، تعبئة الاستبيانات، ومتابعة آخر <br />الأخبار والتحديثات الرسمية</span
+        >
+      </p>
+      <div class="NDMO-logo-homepage" onclick="window.location.href='homepage.html'"></div>
+      <div class="system-message">
+        <div class="rectangle"></div>
+        <p class="text-wrapper-8">
+          ملاحظة مهمة:<br />بعد إرسال الطلب، لن تتمكن من تعديل اسم الجهة أو ملف الإثبات. يرجى<br />
+          التأكد من صحة البيانات قبل الإرسال.
+          
+        </p>
+      </div>
+      <div class="text-field">
+        <div class="background-2"></div>
+        <p class="div-2">
+          <span class="text-wrapper-9">البريد الإلكتروني الرسمي&nbsp;&nbsp;</span>
+          <span class="text-wrapper-10">*</span>
+        </p>
+        <input type="email" class="placeholder-text2" placeholder="  example@company.sa" />
+      </div>
+      <p class="div-3">
+        <span class="text-wrapper-9">ملف الإثباتات الرسمي</span> <span class="text-wrapper-10"> *</span>
+      </p>
+      <div class="text-field-2">
+        <div class="background-2"></div>
+        <p class="div-4">
+          <span class="text-wrapper-9">اسم الجهة  الغير ربحية  </span> <span class="text-wrapper-11">*</span>
+        </p>
+        <input type="text" class="placeholder-text" placeholder="مثال: مؤسسة الأمير محمد بن سلمان بن عبدالعزيز (مسك الخيرية)  " />
+      </div>
+      
+      <!-- منطقة رفع الملفات المحدثة -->
+      <div class="upload-area" id="uploadArea">
+        <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png" style="display: none;" />
+        <p class="PDF-JPEG-JPG-PNG">Pdf, Jpeg, Jpg, Png (حد أقصى 2&nbsp;&nbsp;ميجابايت)</p>
+        <div class="rectangle-2"></div>
+        <img class="upload" src="img/upload 1.png" />
+        <div class="text-wrapper-13">إضغط لرفع الملف</div>
+        <div class="file-info" id="fileInfo" style="display: none;"></div>
+      </div>
+      
+      <!-- مربع الموافقة على الشروط -->
+      <div class="terms-agreement">
+        <input type="checkbox" id="termsCheckbox" class="checkbox-real" />
+        <label for="termsCheckbox" class="text-wrapper-12">أوافق على الشروط والأحكام</label>
+      </div>
+      
+      <!-- الأزرار القابلة للضغط -->
+      <button class="dark-button send-button" id="sendButton" type="button" onclick="window.location.href='Successfulـregistration.html'">
+        <div class="text-wrapper-14">إرسال الطلب</div>
+      </button>
+      <button class="light-button cancel-button" id="cancelButton" type="button">
+        <div class="text-wrapper-15">إلغاء</div>
+      </button>
+    </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const uploadArea = document.getElementById('uploadArea');
+    const fileInput = document.getElementById('fileInput');
+    const fileInfo = document.getElementById('fileInfo');
+    const termsCheckbox = document.getElementById('termsCheckbox');
+    const sendButton = document.getElementById('sendButton');
+    const cancelButton = document.getElementById('cancelButton');
+
+    // النقر على منطقة الرفع
+    uploadArea.addEventListener('click', function(e) {
+      if (!e.target.closest('.file-info')) {
+        fileInput.click();
+      }
+    });
+
+    // سحب وإفلات الملفات
+    uploadArea.addEventListener('dragover', function(e) {
+      e.preventDefault();
+      this.classList.add('drag-over');
+    });
+
+    uploadArea.addEventListener('dragleave', function(e) {
+      e.preventDefault();
+      this.classList.remove('drag-over');
+    });
+
+    uploadArea.addEventListener('drop', function(e) {
+      e.preventDefault();
+      this.classList.remove('drag-over');
+      
+      if (e.dataTransfer.files.length > 0) {
+        handleFile(e.dataTransfer.files[0]);
+      }
+    });
+
+    // اختيار الملف من خلال المدخل
+    fileInput.addEventListener('change', function(e) {
+      if (e.target.files.length > 0) {
+        handleFile(e.target.files[0]);
+      }
+    });
+    
+    // معالجة الملف
+    function handleFile(file) {
+      const allowedTypes = ['application/pdf', 'image/png', 'image/jpeg', 'image/jpg'];
+      const fileExtension = file.name.split('.').pop().toLowerCase();
+      const allowedExtensions = ['pdf', 'png', 'jpg', 'jpeg'];
+      
+      if (!allowedTypes.includes(file.type) && !allowedExtensions.includes(fileExtension)) {
+        alert('❌ نوع الملف غير مسموح. يرجى رفع ملف PDF, PNG, JPG, أو JPEG فقط.');
+        return;
+      }
+
+      const maxSize = 2 * 1024 * 1024; // 2 MB
+      if (file.size > maxSize) {
+        alert('❌ حجم الملف كبير جداً. الحد الأقصى المسموح هو 2 MB.');
+        return;
+      }
+
+      displayFileInfo(file);
+    }
+
+    function displayFileInfo(file) {
+      const fileSize = (file.size / (1024 * 1024)).toFixed(2);
+      const fileType = getFileTypeName(file.type);
+      
+      fileInfo.innerHTML = `
+        <div class="file-info-content">
+          <strong>✅ تم رفع الملف بنجاح</strong>
+          <p>الاسم: ${file.name}</p>
+          <p>النوع: ${fileType}</p>
+          <p>الحجم: ${fileSize} MB</p>
+          <button type="button" onclick="removeFile()" class="remove-btn">إزالة الملف</button>
+        </div>
+      `;
+      
+      fileInfo.style.display = 'block';
+      uploadArea.querySelector('.text-wrapper-13').style.display = 'none';
+      uploadArea.querySelector('.upload').style.display = 'none';
+    }
+
+    function getFileTypeName(type) {
+      const types = {
+        'application/pdf': 'PDF',
+        'image/png': 'PNG',
+        'image/jpeg': 'JPG',
+        'image/jpg': 'JPEG'
+      };
+      return types[type] || type;
+    }
+
+    window.removeFile = function() {
+      fileInput.value = '';
+      fileInfo.style.display = 'none';
+      uploadArea.querySelector('.text-wrapper-13').style.display = 'block';
+      uploadArea.querySelector('.upload').style.display = 'block';
+    };
+
+    // زر إرسال الطلب
+    sendButton.addEventListener('click', function() {
+      if (!termsCheckbox.checked) {
+        alert('❌ يرجى الموافقة على الشروط والأحكام أولاً');
+        return;
+      }
+      
+      const agencyName = document.querySelector('.placeholder-text').value.trim();
+      const email = document.querySelector('.placeholder-text2').value.trim();
+      const file = fileInput.files[0];
+      
+      if (!agencyName || !email || !file) {
+        alert('❌ يرجى تعبئة جميع الحقول المطلوبة');
+        return;
+      }
+
+      // ✅ التحقق من صحة البريد الإلكتروني
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('❌ صيغة البريد الإلكتروني غير صحيحة. يرجى إدخال بريد إلكتروني صحيح مثل example@gov.sa');
+        return;
+      }
+
+      // ✅ التحقق من أن اسم الجهة يحتوي على حروف فقط (عربية أو إنجليزية)
+      const nameRegex = /^[\u0600-\u06FFa-zA-Z\s]+$/;
+      if (!nameRegex.test(agencyName)) {
+        alert('❌ اسم الجهة يجب أن يحتوي على حروف فقط (عربية أو إنجليزية) بدون أرقام أو رموز.');
+        return;
+      }
+
+      this.style.transform = 'scale(0.98)';
+      setTimeout(() => {
+        this.style.transform = '';
+      }, 150);
+
+      alert('✅ تم إرسال الطلب بنجاح! سيتم مراجعة طلبك قريباً.');
+    });
+
+    // زر الإلغاء
+  cancelButton.addEventListener('click', function () {
+  if (!confirm('هل أنت متأكد من إلغاء الطلب؟ ستعود إلى الصفحة السابقة.')) return;
+
+  // 1) لو فيه سجل تصفح سابق
+  if (window.history.length > 1) {
+    window.history.back();
+    return;
+  }
+
+  // 2) لو فيه صفحة مُحيلة
+  if (document.referrer && document.referrer !== window.location.href) {
+    window.location.href = document.referrer;
+    return;
+  }
+
+  // 3) بديل أخير: وجّه لصفحة تحددها أنت
+  window.location.href = 'index.html'; // غيّرها للي يناسبك (مثلاً homepage.html)
+});
+
+  });
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+   <script>
+  const cardsContainer = document.getElementById("cardsContainer");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+
+  let currentIndex = 0;
+  const cards = cardsContainer.children;
+  const cardWidth = 240; // عرض الكارد + المسافة بين الكروت
+
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex < cards.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0; // يرجع للبداية
+    }
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = cards.length - 1; // يروح لآخر كارد
+    }
+    updateCarousel();
+  });
+
+  function updateCarousel() {
+    const offset = -(currentIndex * cardWidth);
+    cardsContainer.style.transform = `translateX(${offset}px)`;
+  }
+</script>
+
+    <div class="frame">
+    <div class="examples-reviews-web">
+      <div class="chrome-browser-bar">
+
+        <div class="address-bar">
+          <div class="URL">
+            <div class="URL">
+            </div>
+        </div>
+  <div class="text-wrapper">
+
+        </div>
+        
+   
+      </div>
+      
+      <img class="kingdom" src="img/your-image.jpg" />
+
+   
+      <div class="rectangle"></div>
+      <img class="screenshot" src="img/DGA.png" />
+      <div class="pagenation">
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+      </div>
+      <div class="group">
+        <div class="section">
+          <img class="background" src="img/Background.png" />
+          <div class="farword-icon">
+            <div class="ellipse"></div>
+       
+          </div>
+        <p class="text-wrapper-34">منصة الإستبيانات </p>
+<p class="text-wrapper-35"> التابعة لمكتب ادارة </p>
+<p class="text-wrapper-36">البيانات الوطنية</p></p>
+</p>
+          <div class="card">
+             <div class="backround"></div>
+                 <div class="text-wrapper-2">من نحن</div>
+         
+          </div>
+          <div class="card-2">
+            <div class="backround"></div>
+            <div class="text-wrapper-2">مميزات المنصة</div>
+            <img class="icon-3" src="img/Icon.svg" />
+            <img class="icon-3" src="img/Icon.svg" />
+            <img class="icon-4" src="img/Icon.svg" />
+          </div>
+          <div class="card-3">
+          
+                   <div class="backround"></div>
+            <div class="text-wrapper-3">الأهداف</div>
+          </div>
+
+<!-- سهم اليمين -->
+<div id="nextBtn" class="farword-icon">
+  <div class="ellipse"></div>
+  <img class="arrow" src="img/Arrow_8.png" />
+</div>
+
+<!-- الكروت داخل حاوية -->
+<div id="cardsContainer" class="cards-wrapper">
+  <div class="card">
+    <div class="backround"></div>
+    <div class="text-wrapper-2">من نحن</div>
+  </div>
+  <div class="card-2">
+    <div class="backround"></div>
+    <div class="text-wrapper-2">مميزات المنصة</div>
+    <img class="icon-3" src="img/Icon.svg" />
+    <img class="icon-3" src="img/Icon.svg" />
+    <img class="icon-4" src="img/Icon.svg" />
+  </div>
+  <div class="card-3">
+    <div class="backround"></div>
+    <div class="text-wrapper-3">الأهداف</div>
+  </div>
+</div>
+
+<!-- سهم اليسار -->
+<div id="prevBtn" class="backword-icon">
+  <img class="arrow-2" src="img/Arrow_to_left8.png" />
+</div>
+          <div class="pagenation-2"></div>
+          <div class="text-wrapper-4">إقراء المزيد</div>
+          <div class="text-wrapper-5">إقراء المزيد</div>
+        </div>
+        <img class="icon-5" src="img/Icon.svg" />
+      </div>
+      <div class="text-wrapper-6">إقراء المزيد</div>
+      <div class="div-2">
+        <div class="frame">
+          <div class="text-wrapper-7">الاخبار المنشورة</div>
+          <div class="text-wrapper-8">8</div>
+        </div>
+        <div class="frame-2">
+          <div class="text-wrapper-9">الجهات المسجلة</div>
+          <div class="text-wrapper-10">459</div>
+        </div>
+        <div class="frame-2">
+          <div class="text-wrapper-11">الاستبيانات المنشورة</div>
+          <div class="text-wrapper-12">50</div>
+        </div>
+        <div class="frame-2">
+          <div class="text-wrapper-13">الاستجابات</div>
+          <div class="text-wrapper-14">386</div>
+        </div>
+      </div>
+      <div class="sign-in-icon" onclick="window.location.href='Login_Page.html'"></div>
+      <div class="SDAIA-website"  onclick="window.location.href='https://sdaia.gov.sa/ar/default.aspx'"></div>
+        <div class="content-wrapper">
+          <div class="content">
+            <div class="state-layer" style="top:50px;"><img class="icon-6" src="img/Closed_sidebar.png"  onclick="window.location.href='infoPage.html'"/></div>
+          </div>
+        </div>
+      </div>
+      <div class="mouse-cursor">
+        <div class="layer">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

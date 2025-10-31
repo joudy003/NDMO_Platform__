@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style2.css" />
+    
+  </head>
+  <body>
+
+
+    <div class="frame">
+    <div class="examples-reviews-web">
+      <img class="kingdom" src="img/your-image.jpg" />
+      <div class="sign-in-icon"  onclick="window.location.href='Login_Page.html'"></div>
+      <div class="SDAIA-website"  onclick="window.location.href='https://sdaia.gov.sa/ar/default.aspx'"></div>
+     
+      <div class="icon-button2">
+  <div class="content-wrapper">
+    <div class="content">
+      <div class="state-layer" onclick="toggleSidebar()">
+        <img id="sidebarToggleIcon" class="icon" src="img/Closed_sidebar.png" />
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="NDMO-logo-homepage" onclick="window.location.href='homepage'"></div>
+      <div class="sidebar">
+  <div class="close-btn" onclick="toggleSidebar()"></div>
+  <div class="div">
+    <img class="shadow" src="img/Sidebar.png" />
+            
+         <div class="icon-button">
+          
+  <div class="icon-texts">
+  <div class="has-submenu">
+  <div class="sidebar-row2" role="button" tabindex="0">
+    <span class="label">عن المنصة</span>
+    <span class="arrow">⌄</span>
+  </div>
+  <div class="submenu" dir="rtl">
+    <div class="submenu-item" onclick="window.location.href='About_Ndmo.html'">عن المنصة</div>
+    <div class="submenu-item" onclick="window.location.href='Objective_NDMO.html'">الأهداف</div>
+    <div class="submenu-item" onclick="window.location.href='Features_NDMO.html'">مميزات المنصة</div>
+  </div>
+</div>
+    <!-- ضع هذه الكتلة مكان زر التسجيل الحالي والقائمة التابعة له -->
+<div class="has-submenu">
+  <div class="sidebar-row2" role="button" tabindex="0">
+    <span class="label">التسجيل</span>
+    <span class="arrow">⌄</span>
+  </div>
+
+  <!-- القائمة الفرعية تظهر فوق/فوق نفس الـ sidebar -->
+  <div class="submenu" dir="rtl">
+    <div class="submenu-item" onclick="window.location.href='government_signup.html'">جهة حكومية</div>
+    <div class="submenu-item" onclick="window.location.href='nonprofit_signup.html'">جهة غير ربحية</div>
+    <div class="submenu-item" onclick="window.location.href='private_signup.html'" >جهة خاصة</div>
+  </div>
+</div>
+
+</div>
+</div>
+</div>     
+          </div>
+          <div class="section">
+            
+
+            </div></div>
+          </div>
+        </div>
+      </div>
+            <div class="disclosure"><div class="text-wrapper-2"></div></div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="text-wrapper-3">⌄</div>
+      <div class="close"></div>
+    </div>
+<script>
+
+  function toggleSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  const icon = document.getElementById('sidebarToggleIcon');
+
+  // تبديل حالة السايدبار
+  sidebar.classList.toggle('hidden');
+
+  // تبديل الأيقونة
+  if (sidebar.classList.contains('hidden')) {
+    icon.src = "img/Closed_sidebar.png"; // إذا السايدبار مغلق
+  } else {
+    icon.src = "img/Open_sidebar.png";   // إذا السايدبار مفتوح
+  }
+}
+  // فتح/إغلاق القائمة عند الضغط على "التسجيل"
+  document.addEventListener('click', function(e) {
+    const trigger = e.target.closest('.sidebar .sidebar-row2');
+    const openNodes = document.querySelectorAll('.sidebar .has-submenu.open');
+
+    if (trigger) {
+      const container = trigger.closest('.has-submenu');
+      // إغلاق أي قوائم مفتوحة أخرى
+      openNodes.forEach(n => { if (n !== container) n.classList.remove('open'); });
+      // تبديل الحالية
+      container.classList.toggle('open');
+      return;
+    }
+
+    // الضغط خارج القائمة يغلقها
+    if (!e.target.closest('.sidebar .has-submenu')) {
+      openNodes.forEach(n => n.classList.remove('open'));
+    }
+  });
+
+  // دعم الكيبورد (Enter/Space) على زر التسجيل
+  document.addEventListener('keydown', function(e) {
+    const isEnter = (e.key === 'Enter' || e.keyCode === 13);
+    const isSpace = (e.key === ' ' || e.keyCode === 32);
+    if ((isEnter || isSpace) && document.activeElement.matches('.sidebar-row2')) {
+      e.preventDefault();
+      document.activeElement.closest('.has-submenu').classList.toggle('open');
+    }
+  });
+</script>
+
+  </body>
+</html>

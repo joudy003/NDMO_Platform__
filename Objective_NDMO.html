@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide5.css" />
+    <link rel="stylesheet" href="style5.css" />
+  </head>
+  <body>
+    <div class="frame">
+    <div class="examples-reviews-web">
+      <div class="NDMO-logo-homepage"></div>
+      <img class="kingdom" src="img/your-image.jpg" />
+      <div class="rectangle"></div>
+      <img class="background" src="img/SQ1.png" />
+      <img class="img" src="img/SQ1.png" />
+      <div class="text-wrapper-33">أهداف المنصة</div>
+
+      <p class="text-wrapper">تحقيق التكامل بين الجهات الحكومية وتعزيز مشاركة البيانات وفق أطر موحدة</p>
+      <p class="div">تعزيز جودة وموثوقية البيانات الوطنية من خلال منصة موحدة ومعتمدة</p>
+      <p class="p">تمكين الجهات الحكومية من التسجيل الرسمي والتفاعل المنظم مع الاستبانات الوطنية</p>
+      <div class="tick-icon">
+        <img class="element" src="img/1.png" />
+        <img class="element-2" src="img/1.png" />
+        <img class="element-3" src="img/1.png" />
+        <img class="element-4" src="img/1.png" />
+        <img class="element-5" src="img/1.png" />
+        <img class="element-6" src="img/1.png" />
+      </div>
+      <div class="text-wrapper-2">التصنيفات الرئيسية</div>
+      <p class="text-wrapper-5"><br />تمكين صناع القرار من الوصول إلى بيانات دقيقة وموثوقة لدعم اتخاذ القرارات</p>
+      <p class="text-wrapper-6">تمكين الجهات من التسجيل الرسمي والتفاعل المنظم مع الاستبانات الوطنية</p>
+      <p class="text-wrapper-7">توحيد قنوات التواصل وجمع البيانات بين الجهات&nbsp;&nbsp;ومكتب إدارة البيانات الوطنية</p>
+            <div class="frame"><div class="div2" onclick="window.location.href='About_Ndmo.html'">عن المنصة</div></div>
+
+<div class="frame-goals" >
+  <div class="div2">الأهداف</div>
+</div>
+<div class="frame-features" onclick="window.location.href='Features_NDMO.html'">
+  <div class="div2">مميزات المنصة</div>
+</div>
+      <img class="image" src="img/black.png" />
+      <img class="image-2" src="img/dark_blue.png" />
+      <img class="image-3" src="img/light_blue.png" />
+      <div class="sign-in-icon" onclick="window.location.href='Login_Page.html'"></div>
+      <div class="SDAIA-website"  onclick="window.location.href='https://sdaia.gov.sa/ar/default.aspx'"></div>
+        <div class="content-wrapper">
+          <div class="content">
+          </div>
+        </div>
+      </div>
+      <div class="NDMO-logo-homepage" onclick="window.location.href='homepage.html'"></div>
+    </div>
+    
+<!-- زر الأيقونة -->
+<div class="icon-button" onclick="toggleSidebar()">
+  <div class="content-wrapper">
+    <div class="content">
+      <div class="Icon">
+        <img id="sidebarToggleIcon" class="content-wrappe" src="img/Closed_sidebar.png" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- القائمة الجانبية (Sidebar) -->
+<div class="sidebar hidden">
+  <div class="has-submenu">
+    <div class="sidebar-row2" role="button" tabindex="0">
+      <span class="label">التسجيل</span>
+      <span class="arrow">⌄</span>
+    </div>
+    <div class="submenu" dir="rtl">
+      <div class="submenu-item" onclick="window.location.href='government_signup.html'">جهة حكومية</div>
+      <div class="submenu-item" onclick="window.location.href='private_signup.html'">جهة خاصة</div>
+      <div class="submenu-item" onclick="window.location.href='nonprofit_signup.html'">جهة غير ربحية</div>
+    </div>
+  </div>
+</div>
+  <script>
+function toggleSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  const icon = document.getElementById('sidebarToggleIcon');
+
+  if (sidebar.classList.contains('hidden')) {
+    sidebar.classList.remove('hidden');
+    icon.src = "img/open_sidebar.png"; // ✅ انتبه لحالة الأحرف
+  } else {
+    sidebar.classList.add('hidden');
+    icon.src = "img/Closed_sidebar.png";
+  }
+}
+
+// فتح/إغلاق القائمة الفرعية عند الضغط
+document.addEventListener('click', function(e) {
+  const trigger = e.target.closest('.sidebar .sidebar-row2');
+  const openNodes = document.querySelectorAll('.sidebar .has-submenu.open');
+
+  if (trigger) {
+    const container = trigger.closest('.has-submenu');
+    openNodes.forEach(n => { if (n !== container) n.classList.remove('open'); });
+    container.classList.toggle('open');
+    return;
+  }
+
+  if (!e.target.closest('.sidebar .has-submenu')) {
+    openNodes.forEach(n => n.classList.remove('open'));
+  }
+});
+
+// دعم الكيبورد (Enter/Space)
+document.addEventListener('keydown', function(e) {
+  const isEnter = (e.key === 'Enter' || e.keyCode === 13);
+  const isSpace = (e.key === ' ' || e.keyCode === 32);
+  if ((isEnter || isSpace) && document.activeElement.matches('.sidebar-row2')) {
+    e.preventDefault();
+    document.activeElement.closest('.has-submenu').classList.toggle('open');
+  }
+});
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,264 @@
+.frame {
+  position: relative;
+  width: 905px;
+  height: 680px;
+  overflow: hidden;
+}
+
+.frame .examples-reviews-web {
+  position: relative;
+  top: -8px;
+  left: -8px;
+  width: 921px;
+  height: 696px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 8px solid;
+  border-color: #cac4d0;
+  background: linear-gradient(
+    180deg,
+    rgba(39, 23, 78, 1) 0%,
+    rgba(53, 70, 180, 1) 100%
+  );
+}
+
+.frame .kingdom {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 905px;
+  height: 610px;
+  aspect-ratio: 1.67;
+  object-fit: cover;
+}
+
+.frame .form {
+  position: absolute;
+  top: 116px;
+  left: 52px;
+  width: 392px;
+  height: 532px;
+  display: flex;
+  background-color: #fffffffa;
+  border-radius: 19px;
+  box-shadow: 4.2px 4.2px 15.76px 5.25px #0000000d;
+}
+
+.frame .unde {
+  margin-top: 197px;
+  width: 295px;
+  height: 133px;
+  margin-left: 48px;
+  background-color: #f5f8f91a;
+  border-radius: 8.41px;
+  border: 1px solid;
+  border-color: #cac0c080;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.frame .NDMO {
+  position: absolute;
+  top: 264px;
+  left: 470px;
+  font-family: "SF Arabic Rounded-Regular", Helvetica;
+  font-weight: 400;
+  color: #fffffffa;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+}
+
+.frame .text-wrapper {
+  font-family: "SF Arabic Rounded-Regular", Helvetica;
+  font-weight: 400;
+  color: #fffffffa;
+  font-size: 32px;
+  letter-spacing: 0;
+}
+
+.frame .span {
+  font-size: 11px;
+}
+
+.frame .text-wrapper-2 {
+  font-size: 20px;
+}
+
+.frame .text-wrapper-3 {
+  font-size: 13px;
+}
+
+.frame .div {
+  top: 612px;
+  left: 77px;
+  font-family: "SF Arabic Rounded-Regular", Helvetica;
+  font-weight: 400;
+  color: #7f7f7f;
+  font-size: 16px;
+  text-align: center;
+  line-height: normal;
+  position: absolute;
+  letter-spacing: 0;
+  direction: rtl;
+}
+
+.frame .p {
+  top: 335px;
+  left: 112px;
+  width: 268px;
+  font-family: "SF Arabic Rounded-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 12px;
+  line-height: normal;
+  position: absolute;
+  letter-spacing: 0;
+  direction: rtl;
+}
+
+.frame .div-2 {
+  top: 230px;
+  left: 128px;
+  font-family: "SF Arabic Rounded-Bold", Helvetica;
+  font-weight: 700;
+  color: transparent;
+  font-size: 12px;
+  text-align: center;
+  line-height: 24px;
+  position: absolute;
+  letter-spacing: 0;
+  direction: rtl;
+}
+
+.frame .text-wrapper-4 {
+  color: #000000;
+}
+
+.frame .text-wrapper-5 {
+  color: #00000070;
+}
+
+.frame .NDMO-logo-homepage {
+  position: absolute;
+  top: 11.3%;         /* مسافة من الأعلى كنسبة */
+  right: 5%;       /* نحطه باليمين لأن اتجاهك RTL */
+  width: 15%;      /* العرض نسبة من الشاشة */
+  max-width: 200px; /* ما يتعدى 200px */
+  aspect-ratio: 2.4;
+  background-image: url(./img/NDMO_logo.png);
+  background-size: contain; /* يحافظ على أبعاد الشعار */
+  background-repeat: no-repeat;
+  background-position: center;
+   cursor: pointer;
+}
+
+.frame .left {
+  margin-left: -6.72%;
+  width: 12.81px;
+  margin-right: 6.72%;
+  flex: 1;
+}
+
+.frame .wide-dark-button {
+  position: absolute;
+  top: 463px;
+  left: 83px;
+  width: 335px;
+  height: 34px;
+  background-color: #222b59e6;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.frame .text-wrapper-6 {
+  position: absolute;
+  width: 45.97%;
+  height: 47.06%;
+  top: 29.41%;
+  left: 25.67%;
+  font-family: "SF Arabic Rounded-Bold", Helvetica;
+  font-weight: 700;
+  color: #fffffffa;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+}
+
+.frame .accept {
+  position: absolute;
+  top: 143px;
+  left: 187px;
+  width: 111px;
+  height: 87px;
+  aspect-ratio: 1.28;
+  background-image: url(./img/check.png);
+  background-size: cover;
+  background-position: 50% 50%;
+   cursor: pointer;
+}
+
+.examples-reviews-web .wide-dark-button {
+  position: absolute;
+  top: 463px;
+  left: 83px;
+  width: 335px;
+  height: 34px;
+  background-color: #222b59e6;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px #00000040;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-family: "SF Arabic Rounded-Bold", Helvetica;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  border: none;   /* يشيل أي إطار افتراضي */
+}
+
+/* Hover */
+.examples-reviews-web .wide-dark-button:hover {
+  background-color: #11173b;
+  transform: scale(1.05);
+}
+
+/* Active (عند الضغط) */
+.examples-reviews-web .wide-dark-button:active {
+  transform: scale(0.96);
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.frame {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* يغطي الشاشة كاملة */
+  overflow: hidden;
+}
+
+.frame .examples-reviews-web {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0; /* يشيل الحواف إذا ما تبغاها */
+  border: none;     /* يشيل الإطار الرمادي */
+  background: linear-gradient(
+    180deg,
+    rgba(39, 23, 78, 1) 0%,
+    rgba(53, 70, 180, 1) 100%
+  );
+}
+
+.frame .kingdom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* يخلي الصورة تغطي بدون تمدد غير متناسق */
+}

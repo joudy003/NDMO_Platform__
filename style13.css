@@ -1,0 +1,400 @@
+
+.examples-reviews-web {
+  position: relative;
+  width: 904px;
+  height: 680px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(39, 23, 78, 1) 0%,
+    rgba(53, 70, 180, 1) 100%
+  );
+}
+
+.examples-reviews-web .kingdom {
+  position: absolute;
+  top: 53px;
+  left: 0;
+  width: 904px;
+  height: 627px;
+  aspect-ratio: 1.67;
+  object-fit: cover;
+}
+
+.examples-reviews-web .form {
+  position: absolute;
+  top: 116px;
+  left: 52px;
+  width: 408px;
+  height: 532px;
+}
+
+.examples-reviews-web .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 392px;
+  height: 532px;
+  background-color: #fffffffa;
+  border-radius: 19px;
+  box-shadow: 4.2px 4.2px 15.76px 5.25px #0000000d;
+}
+
+
+.examples-reviews-web .div {
+  left: 83px;
+  width: 47px;
+  background-color: #f6f6f6;
+  border: 1px solid;
+  border-color: #c4bdbd;
+  position: absolute;
+  top: 133px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 4px #0000001f;
+}
+
+.examples-reviews-web .text-wrapper {
+  top: 148px;
+  left: 47px;
+  width: 5px;
+  position: absolute;
+  font-family: "Outfit-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.examples-reviews-web .text-wrapper-2 {
+  top: 147px;
+  left: 103px;
+  width: 7px;
+  position: absolute;
+  font-family: "Outfit-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.examples-reviews-web .text-wrapper-3 {
+  top: 146px;
+  left: 160px;
+  width: 7px;
+  position: absolute;
+  font-family: "Outfit-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.examples-reviews-web .text-wrapper-4 {
+  top: 148px;
+  left: 216px;
+  width: 9px;
+  position: absolute;
+  font-family: "Outfit-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.examples-reviews-web .text-wrapper-5 {
+  top: 148px;
+  left: 274px;
+  width: 9px;
+  position: absolute;
+  font-family: "Outfit-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+.examples-reviews-web .otp-input {
+  width: 47px;
+  height: 50px;
+  margin: 0 4.5px;
+  background-color: #f6f6f6;
+  border: 1.5px solid #c4bdbd;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 4px #0000001f;
+  font-size: 20px;
+  font-family: "Outfit-Medium", Helvetica;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.examples-reviews-web .otp-input:focus {
+  border-color: #222b59; /* أزرق غامق */
+  box-shadow: 0 0 5px rgba(34, 43, 89, 0.6);
+}
+
+.examples-reviews-web .text-wrapper-6 {
+  top: 148px;
+  left: 332px;
+  width: 9px;
+  position: absolute;
+  font-family: "Outfit-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.examples-reviews-web .becaus {
+  top: 262px;
+  left: 125px;
+  width: 144px;
+  position: absolute;
+  height: 16px;
+  display: flex;
+ 
+}
+
+.examples-reviews-web .p {
+  width: 142px;
+  height: 16px;
+  font-family: "SF Arabic Rounded-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+}
+
+.examples-reviews-web .span {
+  font-family: "SF Arabic Rounded-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.examples-reviews-web .text-wrapper-7 {
+  text-decoration: underline;
+}
+
+.examples-reviews-web .element {
+  position: absolute;
+  top: 36px;
+  left: 19px;
+  width: 345px;
+  font-family: "SF Arabic Rounded-Medium", Helvetica;
+  font-weight: 400;
+  color: #11173b;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+}
+
+.examples-reviews-web .text-wrapper-8 {
+  font-weight: 500;
+}
+
+.examples-reviews-web .text-wrapper-9 {
+  font-family: "SF Arabic Rounded-Regular", Helvetica;
+  font-size: 11px;
+}
+
+.examples-reviews-web .text-wrapper-10 {
+  position: absolute;
+  top: 484px;
+  left: 27px;
+  font-family: "SF Arabic Rounded-Regular", Helvetica;
+  font-weight: 400;
+  color: #7f7f7f;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+}
+
+.examples-reviews-web .left-arrow {
+  position: absolute;
+  top: 295px;
+  left: 128px;
+  width: 12px;
+  height: 1px;
+ 
+}
+
+.examples-reviews-web .left {
+  margin-left: -6.72%;
+  width: 12.81px;
+  margin-right: 6.72%;
+  flex: 1;
+}
+
+.examples-reviews-web .NDMO {
+  top: 278px;
+  left: 474px;
+  font-family: "SF Arabic Rounded-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 32px;
+  position: absolute;
+  color: #fffffffa;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+}
+
+.examples-reviews-web .text-wrapper-11 {
+  font-family: "SF Arabic Rounded-Regular", Helvetica;
+  font-weight: 400;
+  color: #fffffffa;
+  font-size: 32px;
+  letter-spacing: 0;
+}
+
+.examples-reviews-web .text-wrapper-12 {
+  font-size: 11px;
+}
+
+.examples-reviews-web .text-wrapper-13 {
+  font-size: 20px;
+}
+
+.examples-reviews-web .text-wrapper-14 {
+  font-size: 13px;
+}
+
+.frame .NDMO-logo-homepage {
+  position: absolute;
+  top: 11.3%;         /* مسافة من الأعلى كنسبة */
+  right: 5%;       /* نحطه باليمين لأن اتجاهك RTL */
+  width: 15%;      /* العرض نسبة من الشاشة */
+  max-width: 200px; /* ما يتعدى 200px */
+  aspect-ratio: 2.4;
+  background-image: url(./img/NDMO_logo.png);
+  background-size: contain; /* يحافظ على أبعاد الشعار */
+  background-repeat: no-repeat;
+  background-position: center;
+    cursor: pointer;
+}
+.examples-reviews-web .div-wrapper {
+  top: 409px;
+  left: 198px;
+  width: 106px;
+  position: absolute;
+  height: 16px;
+
+}
+
+.examples-reviews-web .text-wrapper-15 {
+  width: 104px;
+  height: 16px;
+  font-family: "SF Arabic Rounded-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 12px;
+  text-decoration: underline;
+  text-align: center;
+  letter-spacing: 10px;
+  line-height: normal;
+  direction: rtl;
+  cursor: pointer; /* يخلي الماوس يتغير */
+  transition: color 0.2s ease-in-out;
+}
+
+.examples-reviews-web .text-wrapper-15:hover {
+  color: #3546b4; /* يتغير للون أزرق عند المرور */
+}
+
+
+.examples-reviews-web .wide-dark-button {
+  position: absolute;
+  top: 321px;
+  left: 82px;
+  width: 335px;
+  height: 34px;
+  background-color: #222b59e6;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px #00000040;
+  cursor: pointer; /* يجعل الماوس يتغير عند المرور */
+  transition: all 0.2s ease-in-out; /* يضيف سلاسة للتحركات */
+}
+
+/* عند المرور */
+.examples-reviews-web .wide-dark-button:hover {
+  background-color: #11173b; /* يصير أغمق شوي */
+}
+
+/* عند الضغط */
+.examples-reviews-web .wide-dark-button:active {
+  transform: scale(0.96); /* يصغر الزر قليلاً عند الضغط */
+}
+
+
+.examples-reviews-web .text-wrapper-16 {
+  width: 40.43%;
+  height: 41.18%;
+  top: 29.41%;
+  left: 28.66%;
+  font-family: "SF Arabic Rounded-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  color: #fffffffa;
+  letter-spacing: 0;
+  line-height: normal;
+  direction: rtl;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.frame {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* يغطي الشاشة كاملة */
+  overflow: hidden;
+}
+
+.frame .examples-reviews-web {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0; /* يشيل الحواف إذا ما تبغاها */
+  border: none;     /* يشيل الإطار الرمادي */
+  background: linear-gradient(
+    180deg,
+    rgba(39, 23, 78, 1) 0%,
+    rgba(53, 70, 180, 1) 100%
+  );
+}
+
+.frame .kingdom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* يخلي الصورة تغطي بدون تمدد غير متناسق */
+}
