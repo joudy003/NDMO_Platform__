@@ -934,3 +934,16 @@ html, body {
   display: block;
   height: 500px; /* زِد/قلّل حسب طول محتواك */
 }
+.cards-wrapper .card,
+.cards-wrapper .card-2,
+.cards-wrapper .card-3 {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards-wrapper .card:hover,
+.cards-wrapper .card-2:hover,
+.cards-wrapper .card-3:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
