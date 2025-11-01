@@ -533,15 +533,6 @@ img {
   background-color: var(--colors-miscellaneous-keyboards-emoji-mic);
 }
 
-.examples-reviews-web .frame {
-  margin-left: 39px;
-  margin-top: 18.5px;
-  width: 120px;
-  height: 79px;
-  display: flex;
-  flex-direction: column;
-}
-
 .examples-reviews-web .text-wrapper-7 {
   margin-left: 14px;
   width: 92px;
@@ -921,22 +912,17 @@ html, body {
 .frame {
   position: relative;
   width: 100%;
-  height: 100vh; /* يغطي الشاشة كاملة */
-  overflow: hidden;
+  min-height: 100vh; /* بدل height: 100vh */
+  overflow-x: hidden; /* يمنع التمرير الجانبي فقط */
+  overflow-y: auto;   /* يسمح بالتمرير العمودي */
 }
 
 .frame .examples-reviews-web {
   position: relative;
   width: 100%;
-  height: 100%;
-  border-radius: 0; /* يشيل الحواف إذا ما تبغاها */
-  border: none;     /* يشيل الإطار الرمادي */
-  background: linear-gradient(
-    180deg,
-    rgba(39, 23, 78, 1) 0%,
-    rgba(53, 70, 180, 1) 100%
-  );
+  min-height: 100vh; /* خليها مرنة حسب المحتوى */
 }
+
 
 .frame .kingdom {
   position: absolute;
