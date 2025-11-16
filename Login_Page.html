@@ -28,6 +28,21 @@ document.addEventListener("DOMContentLoaded", () => {
     togglePassword(passwordInput, eye);
   });
 });
+
+    const wrongPassword = "WrongPass@1234";
+
+// زر تسجيل الدخول
+const loginBtn = document.querySelector(".wide-dark-button");
+
+// عند الضغط على تسجيل الدخول
+loginBtn.addEventListener("click", (event) => {
+  const pass = passwordInput.value.trim();
+
+  if (pass === wrongPassword) {
+    event.preventDefault(); // منع الانتقال إلى OTP_Page.html
+    alert("بيانات تسجيل الدخول غير صحيحة. الرجاء التحقق من البريد الإلكتروني وكلمة المرور ثم المحاولة مرة أخرى");
+  }
+});
 </script>
   <body>
     <div class="frame">
