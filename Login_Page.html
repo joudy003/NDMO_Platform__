@@ -10,6 +10,46 @@
   </head>
 
   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const eye = document.querySelector(".eye");
+  const emailInput = document.querySelector(".placeholder-text");
+  const passwordInput = document.querySelector(".placeholder-text2");
+  const loginButton = document.getElementById("loginBtn");
+
+  // كلمة المرور التي تُظهر الخطأ
+  const wrongPassword = "WrongPass@1234";
+
+  // إظهار/إخفاء كلمة المرور
+  eye.addEventListener("click", () => {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      eye.style.backgroundImage = "url('./img/closed-eye.png')";
+    } else {
+      passwordInput.type = "password";
+      eye.style.backgroundImage = "url('./img/eye.png')";
+    }
+  });
+
+  // عند الضغط على زر تسجيل الدخول
+  loginButton.addEventListener("click", () => {
+    const email = emailInput.value.trim();
+    const pass = passwordInput.value.trim();
+
+    if (!email || !pass) {
+      alert("❗ يرجى إدخال البريد الإلكتروني وكلمة المرور.");
+      return;
+    }
+
+    // إذا كانت كلمة المرور هي WrongPass@1234 → ظهور الخطأ
+    if (pass === wrongPassword) {
+      alert("بيانات تسجيل الدخول غير صحيحة. الرجاء التحقق من البريد الإلكتروني وكلمة المرور ثم المحاولة مرة أخرى.");
+      return;
+    }
+
+    // أي كلمة مرور أخرى → تسجيل دخول ناجح
+    window.location.href = "OTP_Page.html";
+  });
+});
 document.addEventListener("DOMContentLoaded", () => {
   const eye = document.querySelector(".eye");
   const passwordInput = document.querySelector(".placeholder-text2"); // هذا هو حقل كلمة المرور في الصفحة الجديدة
@@ -68,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="text-wrapper-10">رمز المرور</div>
    <input type="password" class="placeholder-text2" placeholder=" XXXXXXXXXXXXXX  " /></div>   
     <div class="eye"></div>
-      <button class="wide-dark-button " onclick="window.location.href='OTP_Page.html'">
+<button class="wide-dark-button" id="loginBtn">
       <span class="text-wrapper-11"> تسجيل الدخول </span>
       </button>
       <button class="wide-light-button becaus-wrapper" onclick="window.location.href='Status_Inquiry_Page.html'">
