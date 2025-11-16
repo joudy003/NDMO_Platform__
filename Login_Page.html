@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="style7.css" />
   </head>
 
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const eye = document.querySelector(".eye");
-  const passwordInput = document.querySelector(".placeholder-text2"); // هذا هو حقل كلمة المرور في الصفحة الجديدة
+  const passwordInput = document.querySelector(".placeholder-text2"); // حقل كلمة المرور
+  const loginBtn = document.querySelector(".wide-dark-button");      // زر تسجيل الدخول
 
+  // دالة إظهار/إخفاء كلمة المرور
   function togglePassword(input, eyeElement) {
     if (input.type === "password") {
       input.type = "text";
@@ -24,26 +26,34 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  eye.addEventListener("click", () => {
-    togglePassword(passwordInput, eye);
-  });
-});
+  // حدث الضغط على أيقونة العين
+  if (eye && passwordInput) {
+    eye.addEventListener("click", () => {
+      togglePassword(passwordInput, eye);
+    });
+  }
 
-    const wrongPassword = "WrongPass@1234";
+  // كلمة المرور الخاطئة المطلوبة في حالة الاختبار
+  const wrongPassword = "WrongPass@1234";
 
-// زر تسجيل الدخول
-const loginBtn = document.querySelector(".wide-dark-button");
+  // استبدال الـ onclick الموجود في الـ HTML بهذا الحدث
+  if (loginBtn && passwordInput) {
+    loginBtn.onclick = function (event) {
+      const pass = passwordInput.value.trim();
 
-// عند الضغط على تسجيل الدخول
-loginBtn.addEventListener("click", (event) => {
-  const pass = passwordInput.value.trim();
-
-  if (pass === wrongPassword) {
-    event.preventDefault(); // منع الانتقال إلى OTP_Page.html
-    alert("بيانات تسجيل الدخول غير صحيحة. الرجاء التحقق من البريد الإلكتروني وكلمة المرور ثم المحاولة مرة أخرى");
+      if (pass === wrongPassword) {
+        event.preventDefault(); // إيقاف السلوك الافتراضي
+        alert("بيانات تسجيل الدخول غير صحيحة. الرجاء التحقق من البريد الإلكتروني وكلمة المرور ثم المحاولة مرة أخرى");
+      } else {
+        // التصرف الطبيعي: الانتقال لصفحة OTP
+        window.location.href = "OTP_Page.html";
+      }
+    };
   }
 });
 </script>
+
+
   <body>
     <div class="frame">
     <div class="examples-reviews-web">
