@@ -8,6 +8,97 @@
     <link rel="stylesheet" href="style13.css" />
     
     <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const inputs = document.querySelectorAll(".otp-input");
+  const confirmBtn = document.getElementById("confirmOtpBtn");
+  const resendBtn = document.querySelector(".text-wrapper-7"); // إعادة الإرسال
+  const correctOTP = "123456";
+  
+  let timeLeft = 60; // عدد الثواني
+  let timerInterval;
+  let otpExpired = false;
+
+  // تشغيل المؤقت
+  startTimer();
+
+  function startTimer() {
+    otpExpired = false;
+    timeLeft = 60;
+
+    timerInterval = setInterval(() => {
+      timeLeft--;
+
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        otpExpired = true;
+
+        // تعطيل الخانات
+        inputs.forEach(inp => inp.disabled = true);
+        confirmBtn.disabled = true;
+
+        alert("انتهت صلاحية رمز التحقق. يرجى طلب رمز جديد.");
+      }
+    }, 1000);
+  }
+
+  // تشغيل التنقل بين الخانات
+  inputs.forEach((input, index) => {
+    input.addEventListener("input", () => {
+      input.value = input.value.replace(/\D/g, ""); // السماح بالأرقام فقط
+
+      if (input.value.length > 0 && index < inputs.length - 1) {
+        inputs[index + 1].focus();
+      }
+    });
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" && input.value === "" && index > 0) {
+        inputs[index - 1].focus();
+      }
+    });
+  });
+
+  // زر تأكيد الرمز
+  confirmBtn.addEventListener("click", () => {
+    if (otpExpired) {
+      alert("انتهت صلاحية رمز التحقق. يرجى طلب رمز جديد.");
+      return;
+    }
+
+    let enteredCode = "";
+    inputs.forEach(input => enteredCode += input.value);
+
+    if (enteredCode.length < 6) {
+      alert("يرجى إدخال رمز التحقق كاملاً.");
+      return;
+    }
+
+    if (enteredCode === correctOTP) {
+      window.location.href = "Set_New_Password.html";
+    } else {
+      alert("رمز التحقق الذي أدخلته غير صحيح. يرجى المحاولة مرة أخرى.");
+    }
+  });
+
+  // زر إعادة الإرسال
+  resendBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // إعادة تفعيل الخانات
+    inputs.forEach(inp => {
+      inp.disabled = false;
+      inp.value = "";
+    });
+
+    confirmBtn.disabled = false;
+    inputs[0].focus();
+
+    clearInterval(timerInterval);
+    startTimer();
+
+    alert("تم إرسال رمز جديد إلى بريدك الإلكتروني.");
+  });
+});
 document.addEventListener("DOMContentLoaded", () => {
   const inputs = document.querySelectorAll(".otp-input");
   const confirmBtn = document.getElementById("confirmOtpBtn");
