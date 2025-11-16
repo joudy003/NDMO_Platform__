@@ -11,6 +11,32 @@
 
   <script>
 document.addEventListener("DOMContentLoaded", () => {
+  const emailInput = document.querySelector(".placeholder-text");
+  const passwordInput = document.querySelector(".placeholder-text2");
+  const loginButton = document.getElementById("loginBtn");
+
+  // كلمة المرور التي يجب أن تُظهر الخطأ
+  const wrongPassword = "WrongPass@1234";
+
+  loginButton.addEventListener("click", () => {
+    const email = emailInput.value.trim();
+    const pass = passwordInput.value.trim();
+
+    // التحقق من تعبئة الحقول
+    if (!email || !pass) {
+      alert("يرجى إدخال البريد الإلكتروني وكلمة المرور.");
+      return;
+    }
+
+    // إذا كانت كلمة المرور = WrongPass@1234 → ظهور الخطأ
+    if (pass === wrongPassword) {
+      alert("بيانات تسجيل الدخول غير صحيحة. الرجاء التحقق من البريد الإلكتروني وكلمة المرور ثم المحاولة مرة أخرى.");
+      return;
+    }
+
+    // أي كلمة مرور أخرى → تسجيل دخول ناجح
+    window.location.href = "OTP_Page.html";
+  });
   const eye = document.querySelector(".eye");
   const passwordInput = document.querySelector(".placeholder-text2"); // هذا هو حقل كلمة المرور في الصفحة الجديدة
 
