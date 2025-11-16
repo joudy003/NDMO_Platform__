@@ -36,19 +36,22 @@ document.addEventListener("DOMContentLoaded", () => {
   // كلمة المرور الخاطئة المطلوبة في حالة الاختبار
   const wrongPassword = "WrongPass@1234";
 
-  // استبدال الـ onclick الموجود في الـ HTML بهذا الحدث
   if (loginBtn && passwordInput) {
-    loginBtn.onclick = function (event) {
+    // 1) إلغاء أي onclick مكتوب في الـ HTML
+    loginBtn.removeAttribute("onclick");
+
+    // 2) إضافة حدث جديد للزر من الجافاسكربت
+    loginBtn.addEventListener("click", function (event) {
       const pass = passwordInput.value.trim();
 
       if (pass === wrongPassword) {
-        event.preventDefault(); // إيقاف السلوك الافتراضي
+        event.preventDefault(); // منع أي سلوك افتراضي
         alert("بيانات تسجيل الدخول غير صحيحة. الرجاء التحقق من البريد الإلكتروني وكلمة المرور ثم المحاولة مرة أخرى");
       } else {
         // التصرف الطبيعي: الانتقال لصفحة OTP
         window.location.href = "OTP_Page.html";
       }
-    };
+    });
   }
 });
 </script>
