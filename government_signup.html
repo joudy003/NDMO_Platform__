@@ -88,10 +88,12 @@
 
     <script>
       // مصفوفة لحفظ الجهات المسجلة في هذه الجلسة
-      const registrations = [
-         agencyName: "وزارة الصحة".toLowerCase(),
+ const registrations = [
+  {
+    agencyName: "وزارة الصحة".toLowerCase(),
     email: "info@moh.gov.sa".toLowerCase(),
-      ];
+  }
+];
 
       document.addEventListener('DOMContentLoaded', function () {
         const uploadArea = document.getElementById('uploadArea');
